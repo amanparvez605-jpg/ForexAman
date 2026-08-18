@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MarketPulse — Forex & Gold Intelligence</title>
+<style>
+:root{
+  --bg:#07090d;--panel:#0d1118;--panel2:#111722;--line:#202938;
+  --text:#f4f7fb;--muted:#8d99aa;--accent:#d8b46a;--green:#39d98a;--red:#ff6575;--blue:#6aa9ff;
+}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 80% 0%,#1a2030 0,#07090d 35%);color:var(--text);font-family:Inter,Arial,sans-serif}
+a{text-decoration:none;color:inherit}.wrap{max-width:1200px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:rgba(7,9,13,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;letter-spacing:.5px;font-size:20px}.logo span{color:var(--accent)}
+nav{display:flex;gap:22px;color:#aab4c2;font-size:14px}nav a:hover{color:white}
+.live{font-size:12px;border:1px solid #263143;padding:8px 12px;border-radius:999px;background:#0c1119}.dot{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:7px;box-shadow:0 0 12px var(--green)}
+.hero{padding:72px 0 40px;display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:center}
+.kicker{color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:800}
+h1{font-size:clamp(42px,6vw,76px);line-height:.98;margin:14px 0 18px;letter-spacing:-3px}
+.hero p{color:var(--muted);font-size:17px;line-height:1.7;max-width:650px}
+.btn{display:inline-block;margin-top:14px;background:var(--text);color:#080a0e;padding:13px 18px;border-radius:10px;font-weight:800;font-size:14px}
+.gold-card{background:linear-gradient(145deg,#151a23,#0c1017);border:1px solid #2a3342;border-radius:24px;padding:26px;box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.card-top{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}.price{font-size:44px;font-weight:850;margin:18px 0 4px}.up{color:var(--green)}
+.chart{height:100px;margin-top:18px;display:flex;align-items:end;gap:5px}.bar{flex:1;background:linear-gradient(to top,var(--accent),#7c6942);border-radius:4px 4px 0 0;opacity:.85}
+.section{padding:34px 0}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:16px}.section h2{margin:0;font-size:25px}.muted{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:rgba(13,17,24,.88);border:1px solid var(--line);border-radius:16px;padding:18px;transition:.25s}.card:hover{transform:translateY(-3px);border-color:#354156}
+.asset{font-weight:800}.value{font-size:23px;margin:12px 0 5px}.change{font-size:12px}
+.news-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:14px}
+.news{display:flex;gap:16px;padding:17px 0;border-bottom:1px solid var(--line)}.tag{font-size:10px;color:var(--accent);font-weight:800;text-transform:uppercase}.news h3{margin:6px 0;font-size:16px}.news p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.calendar{display:grid;gap:10px}.event{display:flex;justify-content:space-between;gap:12px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#0b1017}.impact{font-size:10px;padding:5px 7px;border-radius:6px}.high{background:rgba(255,101,117,.12);color:var(--red)}.medium{background:rgba(216,180,106,.12);color:var(--accent)}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0;color:var(--muted);font-size:12px;text-align:center}
+@media(max-width:850px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:45px}.grid{grid-template-columns:repeat(2,1fr)}.news-grid{grid-template-columns:1fr}h1{letter-spacing:-2px}}
+@media(max-width:500px){.wrap{padding:0 14px}.grid{grid-template-columns:1fr 1fr}.card{padding:14px}.price{font-size:36px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="logo">MARKET<span>PULSE</span></div>
+  <nav><a href="#markets">Markets</a><a href="#news">News</a><a href="#calendar">Calendar</a><a href="#analysis">Analysis</a></nav>
+  <div class="live"><span class="dot"></span>Live Dashboard</div>
+</div></header>
+
+<main class="wrap">
+<section class="hero">
+  <div>
+    <div class="kicker">Global market intelligence</div>
+    <h1>Trade the news.<br><span style="color:var(--accent)">Understand the move.</span></h1>
+    <p>A premium dashboard for Forex, Gold and major economic events. Track market prices, macro news and event risk from one clean interface.</p>
+    <a class="btn" href="#markets">Explore Markets →</a>
+  </div>
+  <div class="gold-card">
+    <div class="card-top"><span>🥇 XAU / USD</span><span>GOLD</span></div>
+    <div class="price">$2,645.80</div>
+    <div class="up">▲ +0.82% today</div>
+    <div class="chart" aria-label="decorative gold chart">
+      <i class="bar" style="height:28%"></i><i class="bar" style="height:38%"></i><i class="bar" style="height:33%"></i><i class="bar" style="height:50%"></i><i class="bar" style="height:46%"></i><i class="bar" style="height:64%"></i><i class="bar" style="height:58%"></i><i class="bar" style="height:76%"></i><i class="bar" style="height:70%"></i><i class="bar" style="height:90%"></i>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="markets">
+ <div class="section-head"><h2>Market Snapshot</h2><span class="muted">Demo prices • connect an API for live data</span></div>
+ <div class="grid">
+  <div class="card"><div class="asset">XAU/USD</div><div class="value">$2,645.80</div><div class="change up">+0.82%</div></div>
+  <div class="card"><div class="asset">EUR/USD</div><div class="value">1.1718</div><div class="change up">+0.24%</div></div>
+  <div class="card"><div class="asset">GBP/USD</div><div class="value">1.3581</div><div class="change up">+0.18%</div></div>
+  <div class="card"><div class="asset">USD/JPY</div><div class="value">147.42</div><div class="change" style="color:var(--red)">−0.31%</div></div>
+ </div>
+</section>
+
+<section class="section" id="news">
+ <div class="section-head"><h2>Latest Macro News</h2><span class="muted">Global headlines</span></div>
+ <div class="news-grid">
+  <div class="card">
+   <article class="news"><div><div class="tag">Fed</div><h3>Markets focus on the next Federal Reserve decision</h3><p>Rate expectations can quickly move the dollar and precious metals.</p></div></article>
+   <article class="news"><div><div class="tag">Gold</div><h3>Gold watches yields, dollar strength and risk sentiment</h3><p>A clean framework for understanding the major drivers behind XAU/USD.</p></div></article>
+   <article class="news"><div><div class="tag">US Data</div><h3>Employment and inflation data remain key volatility events</h3><p>NFP and CPI releases can create sharp moves across FX and metals.</p></div></article>
+  </div>
+  <div class="card" id="analysis">
+   <div class="tag">Market Bias</div><h3 style="font-size:24px;margin:10px 0">Gold Outlook</h3>
+   <p class="muted" style="line-height:1.7">Bullish / bearish signals should be based on current price action, yields, USD strength and fresh economic data.</p>
+   <div style="margin-top:18px;padding:14px;border:1px solid #293446;border-radius:12px">
+    <div style="display:flex;justify-content:space-between"><span>Momentum</span><b class="up">Positive</b></div>
+    <div style="height:6px;background:#202938;border-radius:9px;margin-top:10px"><div style="height:100%;width:72%;background:var(--green);border-radius:9px"></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="calendar">
+ <div class="section-head"><h2>Economic Calendar</h2><span class="muted">High-impact events</span></div>
+ <div class="calendar">
+  <div class="event"><div><b>FOMC Rate Decision</b><div class="muted">USD • Federal Reserve</div></div><span class="impact high">HIGH</span></div>
+  <div class="event"><div><b>Non-Farm Payrolls (NFP)</b><div class="muted">USD • Employment</div></div><span class="impact high">HIGH</span></div>
+  <div class="event"><div><b>US CPI Inflation</b><div class="muted">USD • Inflation</div></div><span class="impact high">HIGH</span></div>
+  <div class="event"><div><b>ECB Interest Rate Decision</b><div class="muted">EUR • Central Bank</div></div><span class="impact medium">MEDIUM</span></div>
+ </div>
+</section>
+</main>
+
+<footer>MARKETPULSE • Educational market dashboard • Prices and analysis shown here are demo data and are not financial advice.</footer>
+</body>
+</html>
